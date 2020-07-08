@@ -1,0 +1,22 @@
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="mymovieapp">
+            <input type="text" v-model="searchKey">
+            <button v-on:click="searchMovies">Search</button>
+            <h2>Results</h2>
+            <ul>
+                <li v-for="item in moviesList.Search">
+                    <movie-detail v-bind:movie="item"></movie-detail>
+                </li>
+            </ul>
+        </div>
+        <script src = "myvuemovieapp.js"></script>
+    </body>
+</html>
